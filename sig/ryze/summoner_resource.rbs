@@ -1,0 +1,5 @@
+module Ryze
+  class SummonerResource
+    def get_summoner_by_name: (summoner_name: String) -> Object
+  end
+end
