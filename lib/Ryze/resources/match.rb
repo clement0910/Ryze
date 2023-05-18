@@ -13,7 +13,7 @@ module Ryze
       Match.new get_request("/matches/#{match_id}/timeline").body
     end
 
-    def retrieve_matchlist_by_puuid(puuid:, **params)
+    def retrieve_match_list_by_puuid(puuid:, **params)
       Array.new get_request("/matches/by-puuid/#{puuid}/ids", params: params).body
     end
   end

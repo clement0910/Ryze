@@ -12,5 +12,13 @@ module Ryze
     def retrieve_summoner_by_puuid(puuid:)
       Summoner.new get_request("/summoners/by-puuid/#{puuid}").body, @client
     end
+
+    def retrieve_summoner_by_account_id(account_id:)
+      Summoner.new get_request("/summoners/by-account/#{account_id}").body, @client
+    end
+
+    def retrieve_summoner_by_summoner_id(summoner_id:)
+      Summoner.new get_request("/summoners/#{summoner_id}").body, @client
+    end
   end
 end
