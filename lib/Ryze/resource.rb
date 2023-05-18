@@ -7,7 +7,7 @@ module Ryze
     end
 
     def get_request(url, params: {}, headers: {})
-      handle_response client.connection.get(url, params, default_headers.merge(headers))
+      handle_response client.connection.get(@base_url + url, params, default_headers.merge(headers))
     end
 
     def default_headers

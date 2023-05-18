@@ -2,8 +2,9 @@ require 'ostruct'
 
 module Ryze
   class Object < OpenStruct
-    def initialize(attributes)
+    def initialize(attributes, client = nil)
       super to_ostruct(attributes)
+      @client = client
     end
 
     def to_ostruct(obj)

@@ -24,9 +24,5 @@ module Ryze
         conn.adapter adapter
       end
     end
-
-    def inspect
-      "#<Ryze::Client>"
-    end
   end
 end
