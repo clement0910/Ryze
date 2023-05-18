@@ -1,4 +1,13 @@
 module Ryze
-  class SummonerResource
+  class SummonerResource < Resource
+    @base_url: String
+
+    def retrieve_summoner_by_name: (summoner_name: String) -> Sumonner
+
+    def retrieve_summoner_by_puuid: (puuid: String) -> Sumonner
+
+    def retrieve_summoner_by_account_id: (account_id: String) -> Sumonner
+
+    def retrieve_summoner_by_summoner_id: (summoner_id: String) -> Sumonner
   end
 end

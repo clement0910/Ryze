@@ -1,0 +1,9 @@
+module Ryze
+  class MatchResource
+    @base_url: String
+
+    def retrieve_match: (match_id: String) -> Match
+
+    def retrieve_match_list_by_puuid: (puuid: String, **Hash[Symbol, String | Integer] params) -> Array[String]
+  end
+end
