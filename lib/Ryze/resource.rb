@@ -1,4 +1,7 @@
+# frozen_string_literal: true
+
 module Ryze
+  # Resource is a class that provides a base for all Riot API resources.
   class Resource
     attr_reader :client
 

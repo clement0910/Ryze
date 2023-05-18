@@ -1,8 +1,11 @@
+# frozen_string_literal: true
+
 module Ryze
+  # MatchResource is a class corresponding to the MatchV5 Riot API endpoint.
   class MatchResource < Resource
     def initialize(client)
       super
-      @base_url = "https://europe.api.riotgames.com/lol/match/v5".freeze
+      @base_url = "https://europe.api.riotgames.com/lol/match/v5"
     end
 
     def retrieve_match(match_id:)

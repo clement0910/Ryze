@@ -2,6 +2,7 @@
 
 require_relative "Ryze/version"
 
+# The main module for the gem.
 module Ryze
   autoload :Client, "Ryze/client"
   autoload :Error, "Ryze/error"

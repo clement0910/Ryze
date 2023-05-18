@@ -1,6 +1,9 @@
+# frozen_string_literal: true
+
 require "faraday"
 
 module Ryze
+  # Client is the main entry point for interacting with the Riot API.
   class Client
     attr_reader :api_key, :adapter
 

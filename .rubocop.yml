@@ -11,3 +11,14 @@ Style/StringLiteralsInInterpolation:
 
 Layout/LineLength:
   Max: 120
+
+Metrics/BlockLength:
+  ExcludedMethods:
+    - 'describe'
+    - 'context'
+    - 'it'
+
+Naming/FileName:
+  Exclude:
+    - 'lib/Ryze.rb'
+    - 'spec/Ryze_spec.rb'

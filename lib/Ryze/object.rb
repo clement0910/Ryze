@@ -1,6 +1,9 @@
+# frozen_string_literal: true
+
 require "ostruct"
 
 module Ryze
+  # Object is a base class for all objects returned from the Riot API.
   class Object < OpenStruct
     def initialize(attributes, client = nil)
       super to_ostruct(attributes)
