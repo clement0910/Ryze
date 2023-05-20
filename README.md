@@ -14,6 +14,11 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
     $ gem install Ryze
 
+
+## Documentation
+
+The documentation for this gem can be found [here](https://rubydoc.info/github/clement0910/Ryze/master)
+
 ## Usage
 
 To use the gem, you must first obtain an API key from Riot.
