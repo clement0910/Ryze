@@ -3,7 +3,6 @@
 module Ryze
   # Summoner is a class corresponding to the SummonerDto Riot API object.
   class Summoner < Object
-
     # Retrieve the last match of the summoner.
     #
     # @return [Match] Match object.
