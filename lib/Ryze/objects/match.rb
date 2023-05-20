@@ -2,6 +2,5 @@
 
 module Ryze
   # Match is a class corresponding to the MatchDto Riot API object.
-  class Match < Object
-  end
+  class Match < Object; end
 end

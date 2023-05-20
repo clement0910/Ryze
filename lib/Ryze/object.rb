@@ -10,6 +10,8 @@ module Ryze
       @client = client
     end
 
+    private
+
     def to_ostruct(obj)
       if obj.is_a?(Hash)
         OpenStruct.new(obj.transform_values { |val| to_ostruct(val) })
