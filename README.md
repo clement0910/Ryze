@@ -8,11 +8,11 @@ Ryze is a Ruby gem that provides a simple interface to the League of Legends Rio
 
 Install the gem and add to the application's Gemfile by executing:
 
-    $ bundle add ryze
+    $ bundle add Ryze
 
 If bundler is not being used to manage dependencies, install the gem by executing:
 
-    $ gem install ryze
+    $ gem install Ryze
 
 ## Usage
 
