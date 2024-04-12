@@ -35,7 +35,7 @@ client = Ryze::Client.new(api_key: 'YOUR_API_KEY')
 You can then use the client to make requests to the Riot API:
 
 ```ruby
-client.summoner.retrieve_summoner_by_name(summoner_name: 'Faker')
+client.account.retrieve_account_by_riot_id(summoner_name: 'SAKEN')
 ```
 
 ## Roadmap
@@ -48,7 +48,8 @@ client.summoner.retrieve_summoner_by_name(summoner_name: 'Faker')
 
 ## Endpoints
 
-- [x] Summoner-v4
+- [X] Account-v1
+- [X] Summoner-v4
 - [ ] Match-v5
 - [ ] Champion-Mastery-v4
 - [ ] Spectator-V4
