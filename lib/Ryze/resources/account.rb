@@ -13,5 +13,13 @@ module Ryze
     def retrieve_account_by_riot_id(game_name:, tag_line: "EUW")
       Account.new get_request("#{BASE_URL}/by-riot-id/#{game_name}/#{tag_line}").body
     end
+
+    # Retrieve an account by puuid.
+    #
+    # @param puuid [String] puuid of the account.
+    # @return [Account] Account object.
+    def retrieve_account_by_puuid(puuid:)
+      Account.new get_request("#{BASE_URL}/by-puuid/#{puuid}").body
+    end
   end
 end
