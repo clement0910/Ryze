@@ -37,6 +37,11 @@ module Ryze
       SpectatorResource.new(self)
     end
 
+    # @return [LeagueResource] A new instance of LeagueResource.
+    def league
+      LeagueResource.new(self)
+    end
+
     # @return [Faraday::Connection] A new instance of Faraday::Connection or the current instance.
     def connection
       @connection ||= Faraday.new do |conn|

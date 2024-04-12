@@ -1,0 +1,7 @@
+module Ryze
+  class LeagueResource
+    BASE_URL: String
+
+    def retrieve_leagues_by_summoner_id: (summoner_id: String) -> Array[League]
+  end
+end
