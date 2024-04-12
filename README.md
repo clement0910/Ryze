@@ -35,7 +35,7 @@ client = Ryze::Client.new(api_key: 'YOUR_API_KEY')
 You can then use the client to make requests to the Riot API:
 
 ```ruby
-client.account.retrieve_account_by_riot_id(summoner_name: 'SAKEN')
+client.account.retrieve_account_by_riot_id(game_name: 'SAKEN')
 ```
 
 ## Roadmap
