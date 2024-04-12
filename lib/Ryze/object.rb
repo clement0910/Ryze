@@ -11,6 +11,10 @@ module Ryze
 
     private
 
+    # Convert a hash to an OpenStruct recursively.
+    #
+    # @param obj [Hash, Array, ::Object] The object to convert.
+    # @return [OpenStruct, Array, ::Object] The converted object.
     def to_ostruct(obj)
       if obj.is_a?(Hash)
         OpenStruct.new(obj.transform_values { |val| to_ostruct(val) })
