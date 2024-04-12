@@ -1,3 +1,11 @@
+## [0.4.0] - 2023-04-13
+
+### Added
+
+- Added new AccountV1 API Endpoints:
+  - `getAccountByPuuid`
+
+
 ## [0.3.0] - 2023-04-12
 
 ### Added

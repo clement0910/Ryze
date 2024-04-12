@@ -2,6 +2,8 @@ module Ryze
   class AccountResource
     BASE_URL: String
 
+    def retrieve_account_by_puuid: (puuid: String) -> Account
+
     def retrieve_account_by_riot_id: (game_name: String, tag_line: String) -> Account
   end
 end
