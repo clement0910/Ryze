@@ -1,0 +1,4 @@
+module Ryze
+  class Summoner
+  end
+end

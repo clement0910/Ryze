@@ -1,4 +1,4 @@
 module Ryze
-  class Sumonner
+  class Account
   end
 end

@@ -29,7 +29,7 @@ Than, you can create a new client by passing your API key as an argument:
 ```ruby
 require 'ryze'
 
-client = Client.new(api_key: 'YOUR_API_KEY')
+client = Ryze::Client.new(api_key: 'YOUR_API_KEY')
 ```
 
 You can then use the client to make requests to the Riot API:

@@ -1,0 +1,7 @@
+module Ryze
+  class SpectatorResource
+    BASE_URL: String
+
+    def retrieve_current_game_by_puuid: (puuid: String) -> Spectator
+  end
+end

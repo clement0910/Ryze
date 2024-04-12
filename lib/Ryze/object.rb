@@ -5,9 +5,8 @@ require "ostruct"
 module Ryze
   # Object is a base class for all objects returned from the Riot API.
   class Object < OpenStruct
-    def initialize(attributes, client = nil)
+    def initialize(attributes)
       super to_ostruct(attributes)
-      @client = client
     end
 
     private

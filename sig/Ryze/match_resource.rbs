@@ -1,6 +1,6 @@
 module Ryze
   class MatchResource
-    @base_url: String
+    BASE_URL: String
 
     def retrieve_match: (match_id: String) -> Match
 

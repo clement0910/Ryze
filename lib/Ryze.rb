@@ -11,7 +11,11 @@ module Ryze
 
   autoload :Summoner, "Ryze/objects/summoner"
   autoload :Match, "Ryze/objects/match"
+  autoload :Account, "Ryze/objects/account"
+  autoload :Spectator, "Ryze/objects/spectator"
 
   autoload :SummonerResource, "Ryze/resources/summoner"
   autoload :MatchResource, "Ryze/resources/match"
+  autoload :AccountResource, "Ryze/resources/account"
+  autoload :SpectatorResource, "Ryze/resources/spectator"
 end

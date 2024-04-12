@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description = "Ruby wrapper for the Riot Games API. Riot Games API can be found here: https://developer.riotgames.com/apis"
   spec.homepage = "https://github.com/clement0910/Ryze"
   spec.license = "MIT"
-  spec.required_ruby_version = ">= 2.6.0"
+  spec.required_ruby_version = ">= 3.0"
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "https://github.com/clement0910/Ryze"
@@ -26,5 +26,6 @@ Gem::Specification.new do |spec|
 
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "faraday", "~> 2.7.4"
+  spec.add_dependency "addressable", "~> 2.7"
+  spec.add_dependency "faraday", "~> 2.9.0"
 end

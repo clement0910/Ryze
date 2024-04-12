@@ -1,0 +1,6 @@
+{
+  "status": {
+    "message": "Data not found - spectator game info isn't found",
+    "status_code": 404
+  }
+}

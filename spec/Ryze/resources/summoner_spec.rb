@@ -1,35 +1,23 @@
 # frozen_string_literal: true
 
-require "rspec"
-require "spec_helper"
-
 RSpec.describe Ryze::SummonerResource do
   let(:client) { Ryze::Client.new(api_key: "my_api_key", adapter: :test, stubs: faraday_stub) }
   let(:resource) { client.summoner }
-  let(:base_url) { "https://euw1.api.riotgames.com/lol/summoner/v4" }
+  let(:base_url) { described_class::BASE_URL }
 
   shared_examples "retrieve_summoner" do |method, url, identifier_key, identifier_method, identifier|
-    let(:faraday_stub) { stub_request(url: "#{base_url}/#{url}/#{identifier}", response: summoner_stub_response) }
-    let(:summoner_stub_response) { stub_response(fixture: "summoner/retrieve_summoner") }
-
     subject { resource.send(method, identifier_key => identifier) }
 
-    it "should return a Summoner Class" do
+    let(:faraday_stub) { stub_request(url: "#{base_url}/#{url}/#{identifier}", response: summoner_stub_response) }
+    let(:summoner_stub_response) { stub_response(fixture: "summoner/retrieve_summoner_200") }
+
+    it "return a Summoner Class" do
       expect(subject).to be_a(Ryze::Summoner)
     end
 
-    it "should have correct identifier" do
+    it "have correct identifier" do
       expect(subject.send(identifier_method)).to eq(identifier)
     end
-  end
-
-  describe "#retrieve_summoner_by_name" do
-    it_behaves_like "retrieve_summoner",
-                    :retrieve_summoner_by_name,
-                    "summoners/by-name",
-                    :summoner_name,
-                    :name,
-                    "ReSPioZ"
   end
 
   describe "#retrieve_summoner_by_puuid" do

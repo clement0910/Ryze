@@ -27,10 +27,20 @@ module Ryze
       MatchResource.new(self)
     end
 
+    # @return [AccountResource] A new instance of AccountResource.
+    def account
+      AccountResource.new(self)
+    end
+
+    # @return [SpectatorResource] A new instance of SpectatorResource.
+    def spectator
+      SpectatorResource.new(self)
+    end
+
     # @return [Faraday::Connection] A new instance of Faraday::Connection or the current instance.
     def connection
       @connection ||= Faraday.new do |conn|
-        conn.request :json
+        conn.headers["X-Riot-Token"] = @api_key
         conn.response :json, content_type: "application/json"
         conn.adapter adapter, @stubs
       end

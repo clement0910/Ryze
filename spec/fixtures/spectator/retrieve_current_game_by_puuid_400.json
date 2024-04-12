@@ -1,0 +1,6 @@
+{
+  "status": {
+    "message": "Bad Request - Exception decrypting invalid_puuid",
+    "status_code": 400
+  }
+}

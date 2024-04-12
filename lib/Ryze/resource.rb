@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "addressable/uri"
+
 module Ryze
   # Resource is a class that provides a base for all Riot API resources.
   class Resource
@@ -15,10 +17,9 @@ module Ryze
     #
     # @param url [String] The URL to make the request to.
     # @param params [Hash] The parameters to pass to the request.
-    # @param headers [Hash] The headers to pass to the request additional to the default headers.
     # @return [Faraday::Response] The response from the Riot API trailed by the Ryze response handler.
-    def get_request(url, params: {}, headers: {})
-      handle_response client.connection.get(@base_url + url, params, default_headers.merge(headers))
+    def get_request(url, params: {})
+      handle_response client.connection.get(Addressable::URI.encode(url), params)
     end
 
     private
@@ -33,10 +34,6 @@ module Ryze
       end
 
       response
-    end
-
-    def default_headers
-      { "X-Riot-Token" => client.api_key }
     end
   end
 end
