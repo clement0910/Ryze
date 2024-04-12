@@ -13,6 +13,6 @@ require "Ryze"
 
 require "irb"
 
-@client = Ryze::Client.new(api_key: "RGAPI-0f044877-f0bf-4cbe-9b56-76b1266e9d2b")
+@client = Ryze::Client.new(api_key: "YOUR_API_KEY")
 
 IRB.start(__FILE__)
